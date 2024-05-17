@@ -36,14 +36,37 @@
         </section>
         <section class="card">
             <h2>Information</h2>
-            <!-- Espacio para agregar contenido de información aquí -->
+            <iframe src="https://maps.app.goo.gl/T7bfR1bQDqR9nbAi9" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <section class="card">
+                <h2>Page Visit Counter</h2>
+                <p id="visitCount">Total Visits: </p>
+            </section>
         </section>
-        <picture>
+        <picture style="position: relative;">
             <source srcset="imagen-mobile.webp" media="(max-width: 400px)">
             <source srcset="images/campinas_brazil_temple_lds.webp">
-            <img src="fallback-image.jpg" alt="Descripción de la imagen">
+            <img src="fallback-image.jpg" alt="Campinas Brazil Temple" style="width: 100%;">
+            <div style="position: absolute; top: 10px; left: 10px; color: white; font-size: 13px; background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+                Campinas Brazil Temple
+            </div>
         </picture>
     </main>
+    <script>
+        // Obtiene el contador de visitas desde localStorage
+        let visitCount = localStorage.getItem('visitCount');
+    
+        // Si no hay contador de visitas, lo establece en 0
+        if (!visitCount) {
+            visitCount = 0;
+        }
+    
+        // Incrementa el contador de visitas y lo muestra en la página
+        visitCount++;
+        document.getElementById('visitCount').textContent += visitCount;
+    
+        // Guarda el nuevo contador de visitas en localStorage
+        localStorage.setItem('visitCount', visitCount);
+    </script>
     <footer>
         <p>© <span id="currentYear"></span> [Danny Rausseo] - [São Paulo - Brazil]</p>
         <p id="lastModified"></p> <!-- Este párrafo será llenado con JavaScript -->
@@ -52,4 +75,3 @@
     <script src="scripts/getDates.js"></script>
 </body>
 </html>
-
