@@ -6,6 +6,8 @@
     <title>[Danny Rausseo] - WDD 230 - Web Frontend Development</title>
     <meta name="description" content="Assignment portal for WDD 230 - Web Frontend Development, providing access to tasks, learning resources, and projects. Ideal for students like [Your Full Name], looking to enhance their skills in HTML, CSS, and JavaScript.">
     <meta name="author" content="[Danny Rausseo]">
+    <link rel="stylesheet" href="styles/normalize.css">
+
 
     <!-- Enlace a los archivos CSS -->
     <link rel="stylesheet" href="styles/base.css">
@@ -37,6 +39,11 @@
             <h2>Information</h2>
             <!-- Espacio para agregar contenido de información aquí -->
         </section>
+        <picture>
+            <source srcset="imagen-mobile.webp" media="(max-width: 400px)">
+            <source srcset="images/campinas_brazil_temple_lds.webp">
+            <img src="fallback-image.jpg" alt="Descripción de la imagen">
+          </picture>
     </main>
     <footer>
         <p>© <span id="currentYear"></span> [Danny Rausseo] - [São Paulo - Brazil]</p>
