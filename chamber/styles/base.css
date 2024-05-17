@@ -1,0 +1,92 @@
+/* General styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8eded; /* Pastel pink */
+    color: #333; /* Dark text color */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #c2d5f4; /* Baby blue for the navigation bar */
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Styles for the home, discover, directory, join pages */
+.home, .discover, .directory, .join {
+    padding: 2em;
+}
+
+/* Logo styles */
+.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    /* Add specific styles for the logo here */
+}
+
+/* Navigation bar styles */
+.navbar {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    /* Add specific styles for the navigation bar here */
+}
+
+/* News section styles */
+.news-section {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    /* Add specific styles for the news section here */
+}
+
+/* Header styles */
+header {
+    padding: 2rem;
+}
+
+/* Title styles */
+h1, h2, h3, h4, h5, h6 {
+    /* Add styles for titles here */
+}
+
+/* Section styles */
+section {
+    margin-bottom: 20px;
+    /* Add styles for sections here */
+}
+
+/* List styles */
+ul, ol {
+    /* Add styles for lists here */
+}
+
+/* Link styles */
+a {
+    /* Add styles for links here */
+}
+
+/* Footer styles */
+footer {
+    /* Add styles for footer here */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
