@@ -1,0 +1,14 @@
+/* Estilos para las imágenes */
+img {
+    display: block; /* Mostrar las imágenes como bloques para centrarlas */
+    margin: 0 auto; /* Centrar las imágenes horizontalmente */
+    width: 400px; /* Ancho fijo para las imágenes */
+    height: auto; /* Altura automática para mantener la relación de aspecto */
+    opacity: 0; /* Inicialmente ocultar las imágenes */
+    transition: opacity 0.5s ease-in-out; /* Transición de opacidad */
+}
+
+/* Animación para mostrar las imágenes gradualmente */
+img.fade-in {
+    opacity: 1; /* Mostrar la imagen con opacidad completa */
+}
