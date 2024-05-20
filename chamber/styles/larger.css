@@ -1,0 +1,14 @@
+/* larger.css */
+.hamburger {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
