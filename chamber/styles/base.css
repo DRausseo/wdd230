@@ -6,7 +6,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgba(255, 215, 0, 0.3); /* Lighter yellow background with transparency for these sections */
+    background-color: #FFCC00; /* Yellow background for the body */
 }
 
 header {
@@ -23,7 +23,18 @@ nav {
 }
 
 .hamburger {
-    display: none;
+        display: none;
+    }
+    
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+        }
+        .nav-menu {
+            display: none;
+        }
+    
+    
 }
 
 .nav-menu {
@@ -70,4 +81,19 @@ h1, h2 {
 
 .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
     color: #002776; /* Blue color for section headers */
+}
+.nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger.open::before {
+    content: '✖'; /* X symbol */
+    font-size: 2rem;
+    color: white;
+}
+.dark-mode {
+    background-color: #333;
+    color: #fff;
 }
