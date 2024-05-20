@@ -1,12 +1,16 @@
-/* base.css */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset some basic elements */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #FFCC00; /* Yellow background for the body */
 }
 
 header {
-    background-color: #333;
+    background-color: #009739; /* Green background for header */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -39,13 +43,31 @@ nav {
 }
 
 .hero {
-    background: url('../images/hero.jpg') no-repeat center center/cover;
+    background: url('../images/hero.webp') no-repeat center center/cover;
     height: 50vh;
 }
 
 footer {
-    background-color: #333;
+    background-color: #009739; /* Green background for footer */
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+/* Section styles */
+.hero, .call-to-action, .current-events, .weather, .company-spotlight {
+    background-color: #FFCC00; /* Yellow background for these sections */
+    color: #000000; /* Black text color for small text */
+}
+
+header, .hero, .call-to-action {
+    color: #FFFFFF; /* White text color for titles */
+}
+
+h1, h2 {
+    color: #009739; /* Green color for titles inside blocks */
+}
+
+.hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
+    color: #002776; /* Blue color for section headers */
 }
