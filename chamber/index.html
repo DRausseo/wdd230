@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to the Chamber of Commerce of São Paulo.">
-    <meta name="author" content="Danny M. Rausseo">
-    <title>Chamber of Commerce of São Paulo</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce home page.">
+    <meta name="author" content="Your Name">
+    <title>City Chamber of Commerce</title>
     <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
-    
-    <!-- Metaetiquetas Open Graph -->
-    <meta property="og:title" content="Chamber of Commerce of São Paulo">
+    <meta property="og:title" content="City Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://drausseo.github.io/wdd230/images/og-image.webp">
     <meta property="og:url" content="https://drausseo.github.io/wdd230/">
-
+    <meta property="og:description" content="Welcome to the Chamber of Commerce home page.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00; /* Background color of the body is yellow */
+        }
+        header, .hero, .call-to-action {
+            background-color: #009739; /* Green background for header and sections with title */
+            color: #FFFFFF; /* White text color for titles */
+        }
+        h1, h2 {
+            color: #009739; /* Green color for titles inside blocks */
+        }
+        .hero, .call-to-action, .current-events, .weather, .company-spotlight {
+            background-color: #FFCC00; /* Yellow background for these sections */
+            color: #000000; /* Black text color for small text */
+        }
+        .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
+            color: #002776; /* Blue color for section headers */
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Chamber of Commerce of São Paulo</h1>
+        <h1>City Chamber of Commerce</h1>
         <nav>
             <button class="hamburger">&#9776;</button>
             <ul class="nav-menu">
@@ -32,13 +51,29 @@
         </nav>
     </header>
     <main>
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>The purpose of this website is to:</p>
+            <ul>
+                <li>Provide information about the chamber of commerce and its services.</li>
+                <li>Engage with local businesses and the community through events and resources.</li>
+            </ul>
+        </section>
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <ol>
+                <li>How can local businesses join the chamber?</li>
+                <li>What upcoming events are available for networking?</li>
+                <li>How can community members contact the chamber for more information?</li>
+            </ol>
+        </section>
         <section class="hero">
             <h2>Welcome to Our Chamber</h2>
-            <img src="images/hero.webp" alt="Hero Image">
+            <img src="images/hero.jpg" alt="Hero Image">
         </section>
         <section class="call-to-action">
             <h2>Join Us</h2>
-            <a href="#">Join the Chamber of Commerce of São Paulo</a>
+            <a href="#">Join the Chamber of Commerce</a>
         </section>
         <section class="current-events">
             <h2>Current Events</h2>
@@ -52,14 +87,25 @@
             <h2>Company Spotlight</h2>
             <p>Placeholder content for company spotlight.</p>
         </section>
+        <section id="color-schema">
+            <h2>Color Schema</h2>
+            <ul>
+                <li><span style="color:#009739;">#009739</span> - Used for headers and primary buttons.</li>
+                <li><span style="color:#FFCC00;">#FFCC00</span> - Used for the background and secondary elements.</li>
+                <li><span style="color:#002776;">#002776</span> - Used for section headers in yellow blocks.</li>
+                <li><span style="color:#000000;">#000000</span> - Used for small text in yellow blocks.</li>
+            </ul>
+        </section>
+        <section id="typography">
+            <h2>Typography</h2>
+            <p>The primary font for the website is 'Roboto'. It will be applied to all body text.</p>
+        </section>
     </main>
     <footer>
-        <p>Contact Information: [dannymrleon@yahoo.com]</p>
-        <p>Danny M. Rausseo, WDD 230</p>
+        <p>Contact Information: [Your Contact Information]</p>
+        <p>Your Name, WDD 230</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
     <script src="scripts/main.js"></script>
 </body>
 </html>
-
-
