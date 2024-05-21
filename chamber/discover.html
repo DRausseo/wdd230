@@ -17,17 +17,15 @@
         /* Sidebar Layout using CSS Grid */
         .wrapper {
             display: grid;
-            grid-template-columns: 1fr 3fr; /* Adjust as needed */
+            grid-template-columns: 1fr 3fr;
             gap: 20px;
-            /* Only if I needed additional styling */
         }
 
         /* Image Gallery Styles */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust as needed */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 10px;
-            /* Add additional styling as needed */
         }
 
         /* Lazy Loading Effect */
@@ -59,28 +57,42 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <!-- Add more navigation links if I needed -->
         </ul>
     </nav>
 
     <main>
         <div class="wrapper">
             <aside>
-                <!-- Sidebar content goes here -->
-                <p>Welcome! Let us know if you have any questions.</p> <!-- Message for first visit -->
+                <p>Welcome! Let us know if you have any questions.</p>
             </aside>
 
             <section class="gallery">
                 <h2 class="visually-hidden">Image Gallery</h2>
-                <!-- Image gallery with lazy loading -->
-                <img class="lazy" src="wdd230/chamber/images/placeholder1.jpg" data-src="wdd230/chamber/images/image1.webp" alt="Image 1">
-                <img class="lazy" src="wdd230/chamber/images/placeholder2.jpg" data-src="wdd230/chamber/images/image2.webp" alt="Image 2">
-                <img class="lazy" src="wdd230/chamber/images/placeholder3.jpg" data-src="wdd230/chamber/images/image3.webp" alt="Image 3">
-                <img class="lazy" src="wdd230/chamber/images/placeholder4.jpg" data-src="wdd230/chamber/images/image4.webp" alt="Image 4">
-                <img class="lazy" src="wdd230/chamber/images/placeholder5.jpg" data-src="wdd230/chamber/images/image5.webp" alt="Image 5">
-                <img class="lazy" src="wdd230/chamber/images/placeholder6.jpg" data-src="wdd230/chamber/images/image6.webp" alt="Image 6">
+                <figure>
+                    <img class="lazy" src="images/placeholder1.jpg" data-src="images/image1.webp" alt="Image 1">
+                    <figcaption>Image 1</figcaption>
+                </figure>
+                <figure>
+                    <img class="lazy" src="images/placeholder2.jpg" data-src="images/image2.webp" alt="Image 2">
+                    <figcaption>Image 2</figcaption>
+                </figure>
+                <figure>
+                    <img class="lazy" src="images/placeholder3.jpg" data-src="images/image3.webp" alt="Image 3">
+                    <figcaption>Image 3</figcaption>
+                </figure>
+                <figure>
+                    <img class="lazy" src="images/placeholder4.jpg" data-src="images/image4.webp" alt="Image 4">
+                    <figcaption>Image 4</figcaption>
+                </figure>
+                <figure>
+                    <img class="lazy" src="images/placeholder5.jpg" data-src="images/image5.webp" alt="Image 5">
+                    <figcaption>Image 5</figcaption>
+                </figure>
+                <figure>
+                    <img class="lazy" src="images/placeholder6.jpg" data-src="images/image6.webp" alt="Image 6">
+                    <figcaption>Image 6</figcaption>
+                </figure>
             </section>
-            
         </div>
     </main>
 
@@ -91,27 +103,23 @@
 
     <script>
         // JavaScript code for localStorage and message display
-        // Store the current date in milliseconds
         const currentDate = Date.now();
 
-        // Check if the last visit date exists in localStorage
         if (localStorage.getItem('lastVisit')) {
             const lastVisit = new Date(parseInt(localStorage.getItem('lastVisit')));
-            const timeDifference = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24)); // Calculate days between visits
+            const timeDifference = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
 
             if (timeDifference === 0) {
-                document.querySelector('aside').innerHTML = "<p>Back so soon! Awesome!</p>"; // Display message for same day visit
+                document.querySelector('aside').innerHTML = "<p>Back so soon! Awesome!</p>";
             } else {
-                document.querySelector('aside').innerHTML = `<p>You last visited ${timeDifference} ${timeDifference === 1 ? 'day' : 'days'} ago.</p>`; // Display message for other visits
+                document.querySelector('aside').innerHTML = `<p>You last visited ${timeDifference} ${timeDifference === 1 ? 'day' : 'days'} ago.</p>`;
             }
         } else {
-            document.querySelector('aside').innerHTML = "<p>Welcome! Let us know if you have any questions.</p>"; // Display message for first visit
+            document.querySelector('aside').innerHTML = "<p>Welcome! Let us know if you have any questions.</p>";
         }
 
-        // Store the current date in localStorage for future visits
         localStorage.setItem('lastVisit', currentDate);
 
-        // Lazy loading for images
         document.addEventListener("DOMContentLoaded", function() {
             let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
@@ -132,7 +140,6 @@
                     lazyImageObserver.observe(lazyImage);
                 });
             } else {
-                // Fallback for browsers without IntersectionObserver support
                 let lazyLoad = function() {
                     let active = false;
 
@@ -169,7 +176,6 @@
             }
         });
 
-        // Update last modified date in footer
         document.getElementById("lastModified").textContent = document.lastModified;
     </script>
 </body>
