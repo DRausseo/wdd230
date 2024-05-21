@@ -23,18 +23,23 @@ nav {
 }
 
 .hamburger {
-        display: none;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
     }
-    
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;
-        }
-        .nav-menu {
-            display: none;
-        }
-    
-    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .nav-menu.open {
+        display: flex;
+    }
 }
 
 .nav-menu {
@@ -82,6 +87,7 @@ h1, h2 {
 .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
     color: #002776; /* Blue color for section headers */
 }
+
 .nav-menu.open {
     display: flex;
     flex-direction: column;
@@ -93,7 +99,14 @@ h1, h2 {
     font-size: 2rem;
     color: white;
 }
+
 .dark-mode {
     background-color: #333;
     color: #fff;
+}
+
+/* Smooth transition for opening and closing the menu */
+.nav-menu,
+.hamburger {
+    transition: all 0.3s ease;
 }
