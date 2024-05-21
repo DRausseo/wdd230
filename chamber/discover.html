@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the Chamber of Commerce area">
+    <meta name="author" content="Danny M. Rausseo L.">
+    <title>Discover the Chamber Area</title>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <style>
+        /* Add your custom CSS styles here */
+
+        /* Sidebar Layout using CSS Grid */
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* Adjust as needed */
+            gap: 20px;
+            /* Only if I needed additional styling */
+        }
+
+        /* Image Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust as needed */
+            gap: 10px;
+            /* Add additional styling as needed */
+        }
+
+        /* Lazy Loading Effect */
+        .lazy {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .lazy-loaded {
+            opacity: 1;
+        }
+
+        /* Hover Effect for Gallery Images */
+        .gallery img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Discover the Chamber Area</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- Add more navigation links if I needed -->
+        </ul>
+    </nav>
+
+    <main>
+        <div class="wrapper">
+            <aside>
+                <!-- Sidebar content goes here -->
+                <p>Welcome! Let us know if you have any questions.</p> <!-- Message for first visit -->
+            </aside>
+
+            <section class="gallery">
+                <h2 class="visually-hidden">Image Gallery</h2>
+                <!-- Image gallery with lazy loading -->
+                <img class="lazy" src="path/to/placeholder1.jpg" data-src="path/to/image1.webp" alt="Image 1">
+                <img class="lazy" src="path/to/placeholder2.jpg" data-src="path/to/image2.webp" alt="Image 2">
+                <img class="lazy" src="path/to/placeholder3.jpg" data-src="path/to/image3.webp" alt="Image 3">
+                <img class="lazy" src="path/to/placeholder4.jpg" data-src="path/to/image4.webp" alt="Image 4">
+                <img class="lazy" src="path/to/placeholder5.jpg" data-src="path/to/image5.webp" alt="Image 5">
+                <img class="lazy" src="path/to/placeholder6.jpg" data-src="path/to/image6.webp" alt="Image 6">
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Danny Manuel Rausseo Leon. All rights reserved.</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // JavaScript code for localStorage and message display
+        // Store the current date in milliseconds
+        const currentDate = Date.now();
+
+        // Check if the last visit date exists in localStorage
+        if (localStorage.getItem('lastVisit')) {
+            const lastVisit = new Date(parseInt(localStorage.getItem('lastVisit')));
+            const timeDifference = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24)); // Calculate days between visits
+
+            if (timeDifference === 0) {
+                document.querySelector('aside').innerHTML = "<p>Back so soon! Awesome!</p>"; // Display message for same day visit
+            } else {
+                document.querySelector('aside').innerHTML = `<p>You last visited ${timeDifference} ${timeDifference === 1 ? 'day' : 'days'} ago.</p>`; // Display message for other visits
+            }
+        } else {
+            document.querySelector('aside').innerHTML = "<p>Welcome! Let us know if you have any questions.</p>"; // Display message for first visit
+        }
+
+        // Store the current date in localStorage for future visits
+        localStorage.setItem('lastVisit', currentDate);
+
+        // Lazy loading for images
+        document.addEventListener("DOMContentLoaded", function() {
+            let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+                            lazyImage.classList.add("lazy-loaded");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver support
+                let lazyLoad = function() {
+                    let active = false;
+
+                    if (active === false) {
+                        active = true;
+
+                        setTimeout(function() {
+                            lazyImages.forEach(function(lazyImage) {
+                                if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+                                    lazyImage.src = lazyImage.dataset.src;
+                                    lazyImage.classList.remove("lazy");
+                                    lazyImage.classList.add("lazy-loaded");
+
+                                    lazyImages = lazyImages.filter(function(image) {
+                                        return image !== lazyImage;
+                                    });
+
+                                    if (lazyImages.length === 0) {
+                                        document.removeEventListener("scroll", lazyLoad);
+                                        window.removeEventListener("resize", lazyLoad);
+                                        window.removeEventListener("orientationchange", lazyLoad);
+                                    }
+                                }
+                            });
+
+                            active = false;
+                        }, 200);
+                    }
+                };
+
+                document.addEventListener("scroll", lazyLoad);
+                window.addEventListener("resize", lazyLoad);
+                window.addEventListener("orientationchange", lazyLoad);
+            }
+        });
+
+        // Update last modified date in footer
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+
+</html>
