@@ -53,6 +53,7 @@ nav {
 .hero {
     background: url('../images/hero.webp') no-repeat center center/cover;
     height: 50vh;
+    color: #FFFFFF; /* Color blanco para el encabezado en la sección .hero */
 }
 
 footer {
