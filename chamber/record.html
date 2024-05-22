@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form submission confirmation for WDD230 course.">
+    <meta name="author" content="Danny M. Rausseo L.">
+    <title>Record - WDD230 Course</title>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00;
+            color: #000000;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header, footer {
+            background-color: #009739;
+            color: #FFFFFF;
+        }
+        h1, h2 {
+            color: #009739;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>City Chamber of Commerce of São Paulo City</h1>
+        <nav>
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="form.html">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Form Submitted Successfully!</h2>
+            <p>Thank you for your feedback. We appreciate your input.</p>
+            <a href="index.html">Return to Home Page</a>
+        </section>
+    </main>
+    <footer>
+        <p>Contact Information: [dannymrleon@yahoo.com]</p>
+        <p>Danny Manuel Rausseo Leon, WDD 230</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
