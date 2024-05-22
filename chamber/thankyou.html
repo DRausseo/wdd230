@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for applying to join the Chamber of Commerce of São Paulo City.">
+    <meta name="author" content="Danny M. Rausseo L.">
+    <title>Thank You - City Chamber of Commerce of São Paulo City</title>
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00; /* Background color of the body is yellow */
+        }
+        header, .hero, .call-to-action {
+            background-color: #009739; /* Green background for header and sections with title */
+            color: #FFFFFF; /* White text color for titles */
+        }
+        h1, h2 {
+            color: #009739; /* Green color for titles inside blocks */
+        }
+        .hero, .call-to-action, .current-events, .weather, .company-spotlight {
+            background-color: #FFCC00; /* Yellow background for these sections */
+            color: #000000; /* Black text color for small text */
+        }
+        .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
+            color: #002776; /* Blue color for section headers */
+        }
+        main {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>City Chamber of Commerce of São Paulo City</h1>
+        <nav>
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Thank You for Your Application!</h2>
+            <p>We appreciate your interest in joining the Chamber of Commerce of São Paulo City. We will review your application and get back to you soon.</p>
+            <a href="index.html">Return to Home Page</a>
+        </section>
+    </main>
+    <footer>
+        <p>Contact Information: [dannymrleon@yahoo.com]</p>
+        <p>Danny Manuel Rausseo Leon, WDD 230</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
