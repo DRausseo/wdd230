@@ -1,0 +1,56 @@
+:root {
+    --main-bg-color: #FFCC00;
+    --main-text-color: #000000;
+    --form-bg-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+header, .hero, .call-to-action {
+    background-color: #009739;
+    color: #FFFFFF;
+}
+
+h1, h2 {
+    color: #009739;
+}
+
+form {
+    background-color: var(--form-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #009739;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #007B29;
+}
