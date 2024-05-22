@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #009739; /* Verde */
+    --secondary-color: #FFCC00; /* Amarillo */
+    --text-color: #FFFFFF; /* Blanco */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color); /* Fondo amarillo */
+}
+
+header, .hero, .call-to-action {
+    background-color: var(--primary-color); /* Fondo verde */
+    color: var(--text-color); /* Texto blanco */
+}
+
+h1, h2 {
+    color: var(--primary-color); /* Color verde para títulos */
+}
+
+.hero, .call-to-action, .current-events, .weather, .company-spotlight {
+    background-color: var(--secondary-color); /* Fondo amarillo */
+    color: #000000; /* Texto negro para texto pequeño */
+}
+
+.hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
+    color: #002776; /* Azul para los encabezados de sección */
+}
