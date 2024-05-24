@@ -1,15 +1,31 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+ol li::marker {
+    color: navy;
+    font-size: 2rem;
+    font-variant: small-caps;
+}
+
+ol li::before {
+    content: "☑️";
+    margin-right: 0.5rem; /* Espacio entre el emoji y el texto */
+}
 
 /* Reset some basic elements */
 body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFCC00;
+    background-color: #FFCC00; /* Yellow background for the body */
 }
 
 header {
-    background-color: #009739;
+    background-color: #009739; /* Green background for header */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -53,11 +69,10 @@ nav {
 .hero {
     background: url('../images/hero.webp') no-repeat center center/cover;
     height: 50vh;
-    color: #FFFFFF; /* Color blanco para el encabezado en la sección .hero */
 }
 
 footer {
-    background-color: #009739;
+    background-color: #009739; /* Green background for footer */
     color: white;
     text-align: center;
     padding: 1rem;
@@ -65,20 +80,20 @@ footer {
 
 /* Section styles */
 .hero, .call-to-action, .current-events, .weather, .company-spotlight {
-    background-color: #FFCC00;
-    color: #000000;
+    background-color: #FFCC00; /* Yellow background for these sections */
+    color: #000000; /* Black text color for small text */
 }
 
 header, .hero, .call-to-action {
-    color: #FFFFFF;
+    color: #FFFFFF; /* White text color for titles */
 }
 
 h1, h2 {
-    color: #009739;
+    color: #009739; /* Green color for titles inside blocks */
 }
 
 .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
-    color: #002776;
+    color: #002776; /* Blue color for section headers */
 }
 
 .nav-menu.open {
@@ -87,4 +102,13 @@ h1, h2 {
     align-items: center;
 }
 
+.hamburger.open::before {
+    content: '✖'; /* X symbol */
+    font-size: 2rem;
+    color: white;
+}
 
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
