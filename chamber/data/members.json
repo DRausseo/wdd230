@@ -1,0 +1,61 @@
+{
+    "members": [
+      {
+        "name": "Company One",
+        "address": "123 Main St, Sao Paulo",
+        "phone": "123-456-7890",
+        "website": "http://companyone.com",
+        "image": "companyone.jpg",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Company Two",
+        "address": "456 Elm St, Sao Paulo",
+        "phone": "987-654-3210",
+        "website": "http://companytwo.com",
+        "image": "companytwo.jpg",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Company Three",
+        "address": "789 Maple St, Sao Paulo",
+        "phone": "555-555-5555",
+        "website": "http://companythree.com",
+        "image": "companythree.jpg",
+        "membership_level": "Bronze"
+      },
+      {
+        "name": "Company Four",
+        "address": "101 Pine St, Sao Paulo",
+        "phone": "444-444-4444",
+        "website": "http://companyfour.com",
+        "image": "companyfour.jpg",
+        "membership_level": "Gold"
+      },
+      {
+        "name": "Company Five",
+        "address": "202 Oak St, Sao Paulo",
+        "phone": "333-333-3333",
+        "website": "http://companyfive.com",
+        "image": "companyfive.jpg",
+        "membership_level": "Silver"
+      },
+      {
+        "name": "Company Six",
+        "address": "303 Cedar St, Sao Paulo",
+        "phone": "222-222-2222",
+        "website": "http://companysix.com",
+        "image": "companysix.jpg",
+        "membership_level": "Bronze"
+      },
+      {
+        "name": "Company Seven",
+        "address": "404 Birch St, Sao Paulo",
+        "phone": "111-111-1111",
+        "website": "http://companyseven.com",
+        "image": "companyseven.jpg",
+        "membership_level": "Gold"
+      }
+    ]
+  }
+  
