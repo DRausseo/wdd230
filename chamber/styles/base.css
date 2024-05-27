@@ -1,5 +1,63 @@
+/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFCC00; /* Yellow background for the body */
+}
+
+header {
+    background-color: #009739; /* Green background for header */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+footer {
+    background-color: #009739; /* Green background for footer */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Section styles */
+.weather, .call-to-action, .current-events, .company-spotlight {
+    background-color: #FFCC00; /* Yellow background for these sections */
+    color: #000000; /* Black text color for small text */
+    padding: 2rem;
+    width: 100%;
+}
+
+.weather h1, .call-to-action h1, .current-events h1, .company-spotlight h1 {
+    color: #009739; /* Green color for titles inside blocks */
+}
+
+.weather h2, .call-to-action h2, .current-events h2, .company-spotlight h2 {
+    color: #002776; /* Blue color for section headers */
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Ordered list marker style */
 ol li::marker {
     color: navy;
     font-size: 2rem;
@@ -8,106 +66,96 @@ ol li::marker {
 
 ol li::before {
     content: "☑️";
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* Space between the emoji and the text */
 }
 
-/* Reset some basic elements */
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FFCC00;
-}
-
-header {
-    background-color: #009739;
-    color: white;
-    padding: 1rem;
+/* Styles for Directory Page */
+.menu {
+    margin: 1rem auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #bed;
     text-align: center;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
+.menu button {
+    padding: 1rem;
+    font-weight: 700;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5px;
     align-items: center;
 }
 
-.hamburger {
-    display: none;
+.grid section {
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    background-color: #eee;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    .nav-menu {
-        display: none;
-    }
+.grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #333;
 }
 
-.nav-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.grid section > * {
+    margin: 0.1rem;
+}
+
+.grid h3 {
+    font-family: "Caveat", cursive;
+}
+
+.list {
     display: flex;
+    flex-direction: column;
 }
 
-.nav-menu li {
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.list section > * {
     margin: 0 1rem;
 }
 
-.nav-menu a {
-    color: white;
-    text-decoration: none;
+.list section img {
+    display: none; /* smaller viewports only */
 }
 
-.hero {
-    background: url('../images/hero.webp') no-repeat center center/cover;
-    height: 50vh;
+.list section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
 }
 
-footer {
-    background-color: #009739;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+.list section:nth-child(even) {
+    background-color: #bed;
 }
 
-/* Section styles */
-.hero, .call-to-action, .current-events, .weather, .company-spotlight {
-    background-color: #FFCC00;
-    color: #000000;
+section h3 {
+    font-size: 1.5rem;
 }
 
-header, .hero, .call-to-action {
-    color: #FFFFFF;
+section p {
+    font-weight: 600;
+    font-size: smaller;
 }
 
-h1, h2 {
-    color: #009739;
+section a {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.85rem;
+    color: navy;
+    letter-spacing: 1.1pt;
 }
 
-.hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
-    color: #002776;
-}
-
-.nav-menu.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.hamburger.open::before {
-    content: '✖';
-    font-size: 2rem;
-    color: white;
-}
-
-.dark-mode {
-    background-color: #333;
-    color: #fff;
+img {
+    height: 75px;
+    max-width: 100%; /* Images are jerks - Seattle */
 }
