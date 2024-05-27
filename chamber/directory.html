@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Chamber of Commerce of São Paulo City.">
+    <meta name="author" content="Danny M. Rausseo L.">
+    <title>City Chamber of Commerce of São Paulo City</title>
+    <link rel="icon" href="chamber/images/favicon.png" type="image/x-icon">
+    <meta property="og:title" content="City Chamber of Commerce of São Paulo City">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://drausseo.github.io/wdd230/images/og-image.webp">
+    <meta property="og:url" content="https://drausseo.github.io/wdd230/">
+    <meta property="og:description" content="Welcome to the Chamber of Commerce of São Paulo City.">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00;
+        }
+        header, .hero, .call-to-action {
+            background-color: #009739;
+            color: #FFFFFF;
+        }
+        h1, h2 {
+            color: #009739;
+        }
+        .hero, .call-to-action, .current-events, .weather, .company-spotlight {
+            background-color: #FFCC00;
+            color: #000000;
+        }
+        .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
+            color: #002776;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>City Chamber of Commerce of São Paulo City</h1>
+        <nav>
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="directory.html">Directory</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="menu">
+            <button id="grid">⏹️ Grid</button>
+            <button id="list">📄 List</button>
+        </div>
+        <hr>
+        <article id="directory" class="grid">
+            <h2>Member Directory</h2>
+        </article>
+    </main>
+    <footer>
+        <p>Contact Information: ✉️rau23003@byui.edu✉️</p>
+        <p>©️Danny Manuel Rausseo Leon, WDD 230</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script src="scripts/directory.js"></script>
+    
+    <script src="data/members.json"></script>
+    <script>
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
