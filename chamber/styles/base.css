@@ -1,4 +1,3 @@
-/* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 ol li::marker {
@@ -9,7 +8,7 @@ ol li::marker {
 
 ol li::before {
     content: "☑️";
-    margin-right: 0.5rem; /* Espacio entre el emoji y el texto */
+    margin-right: 0.5rem;
 }
 
 /* Reset some basic elements */
@@ -21,11 +20,11 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFCC00; /* Yellow background for the body */
+    background-color: #FFCC00;
 }
 
 header {
-    background-color: #009739; /* Green background for header */
+    background-color: #009739;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -72,7 +71,7 @@ nav {
 }
 
 footer {
-    background-color: #009739; /* Green background for footer */
+    background-color: #009739;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -80,20 +79,20 @@ footer {
 
 /* Section styles */
 .hero, .call-to-action, .current-events, .weather, .company-spotlight {
-    background-color: #FFCC00; /* Yellow background for these sections */
-    color: #000000; /* Black text color for small text */
+    background-color: #FFCC00;
+    color: #000000;
 }
 
 header, .hero, .call-to-action {
-    color: #FFFFFF; /* White text color for titles */
+    color: #FFFFFF;
 }
 
 h1, h2 {
-    color: #009739; /* Green color for titles inside blocks */
+    color: #009739;
 }
 
 .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
-    color: #002776; /* Blue color for section headers */
+    color: #002776;
 }
 
 .nav-menu.open {
@@ -103,7 +102,7 @@ h1, h2 {
 }
 
 .hamburger.open::before {
-    content: '✖'; /* X symbol */
+    content: '✖';
     font-size: 2rem;
     color: white;
 }
