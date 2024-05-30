@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Welcome to the Chamber of Commerce of São Paulo City.">
     <meta name="author" content="Danny M. Rausseo L.">
-    <title>Chamber of Commerce of São Paulo City</title>
+    <title>City Chamber of Commerce of São Paulo City</title>
     <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="City Chamber of Commerce of São Paulo City">
     <meta property="og:type" content="website">
@@ -39,7 +39,7 @@
 </head>
 <body>
     <header>
-        <h1>Chamber of Commerce of São Paulo City</h1>
+        <h1>City Chamber of Commerce of São Paulo City</h1>
         <nav>
             <button class="hamburger">&#9776;</button>
             <ul class="nav-menu">
@@ -51,6 +51,11 @@
         </nav>
     </header>
     <main>
+        <section class="hero">
+            <h2>Welcome to Our Chamber</h2>
+            <img src="images/hero.webp" alt="This is the photo of the Chamber of Commerce building in the city of São Paulo">
+        </section>
+            
         <section>
             <h2>Site Purpose</h2>
             <p>The purpose of this website is to:</p>
@@ -68,16 +73,7 @@
                 <li>How can community members contact the chamber for more information?</li>
             </ol>
         </section>
-        
-        <section>
-            <h2>Welcome to Our Chamber</h2>
-            <section class="hero">
-    <h2>Hero Section</h2>
-    <img src="images/hero.webp" alt="Hero Image">
-</section>
-
-        </section>
-        
+          
         <section class="call-to-action">
             <h2>Join Us</h2>
             <a href="#">Join the Chamber of Commerce of São Paulo City</a>
@@ -89,13 +85,22 @@
         </section>
         
         <section class="weather">
-            <h2>Weather</h2>
-            <p>Placeholder content for weather.</p>
+            <h2>🌦️Weather☀️🌦️</h2>
+            <div id="weather">
+                <p>Current Temperature: <span id="temperature"></span></p>
+                <img id="weather-icon" src="" alt="Weather icon">
+                <p id="weather-condition"></p>
+            </div>
         </section>
         
         <section class="company-spotlight">
             <h2>Company Spotlight</h2>
             <p>Placeholder content for company spotlight.</p>
+        </section>
+        
+        <section id="dynamic-links">
+            <h2>Weekly Activities</h2>
+            <div id="links-container"></div>
         </section>
         
         <section id="color-schema">
@@ -112,6 +117,7 @@
             <h2>Typography</h2>
             <p>The primary font for the website is 'Roboto'. It will be applied to all body text.</p>
         </section>
+        
         <section>
             <h2>Actividades de Pseudo-elementos en CSS</h2>
             <p><a href="https://codepen.io/DRausseo/pen/ZENOdRz" target="_blank">Ver mi actividad de pseudo-elementos en CodePen</a></p>
