@@ -40,3 +40,4 @@ function displayResults(weatherData) {
 
 // Llamar a la función apiFetch para cargar los datos al cargar la página
 apiFetch();
+
