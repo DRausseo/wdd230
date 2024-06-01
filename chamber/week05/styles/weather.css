@@ -1,0 +1,22 @@
+@import url('base.css');
+
+body {
+    background-color: #FFCC00; /* Yellow background for the body */
+}
+
+.weather {
+    background-color: #FFCC00; /* Yellow background for this section */
+    color: #000000; /* Black text color for small text */
+    padding: 2rem;
+    width: 100%;
+}
+
+.weather h1 {
+    color: #009739; /* Green color for titles inside blocks */
+}
+
+.weather h2 {
+    color: #002776; /* Blue color for section headers */
+}
+
+/* Additional specific styles for weather.html */
