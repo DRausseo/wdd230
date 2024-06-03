@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #FFCC00;
@@ -54,10 +56,10 @@
         <nav>
             <button class="hamburger">&#9776;</button>
             <ul class="nav-menu">
-                <li><a href="wdd230/index.html">Home</a></li>
-                <li><a href="chamber/discover.html">About Us</a></li>
-                <li><a href="chamber/join.html">Services</a></li>
-                <li><a href="chamber/record.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
                 <li><a href="directory.html">Directory</a></li>
             </ul>
         </nav>
@@ -70,6 +72,7 @@
         <hr>
         <article id="directory" class="grid">
             <h2>Member Directory</h2>
+            <!-- Los miembros se inyectarán aquí mediante JavaScript -->
         </article>
     </main>
     <footer>
@@ -77,11 +80,7 @@
         <p>©️Danny Manuel Rausseo Leon, WDD 230</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-    <script src="scripts/directory.js"></script>
-    
-    <script src="data/members.json"></script>
-    <script>
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
+
