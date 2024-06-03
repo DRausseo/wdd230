@@ -1,209 +1,86 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the Chamber of Commerce area">
+    <meta name="description" content="Welcome to the Chamber of Commerce of São Paulo City.">
     <meta name="author" content="Danny M. Rausseo L.">
-    <title>Discover the Chamber Area</title>
-    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <title>City Chamber of Commerce of São Paulo City</title>
+    <link rel="icon" href="chamber/images/favicon.png" type="image/x-icon">
+    <meta property="og:title" content="City Chamber of Commerce of São Paulo City">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://drausseo.github.io/wdd230/images/og-image.webp">
+    <meta property="og:url" content="https://drausseo.github.io/wdd230/">
+    <meta property="og:description" content="Welcome to the Chamber of Commerce of São Paulo City.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
     <style>
-        /* Add your custom CSS styles here */
-
-        /* Sidebar Layout using CSS Grid */
-        .wrapper {
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            gap: 20px;
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FFCC00;
         }
-
-        /* Image Gallery Styles */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
+        header, .hero, .call-to-action {
+            background-color: #009739;
+            color: #FFFFFF;
         }
-
-        /* Lazy Loading Effect */
-        .lazy {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+        h1, h2 {
+            color: #009739;
         }
-
-        .lazy-loaded {
-            opacity: 1;
+        .hero, .call-to-action, .current-events, .weather, .company-spotlight {
+            background-color: #FFCC00;
+            color: #000000;
         }
-
-        /* Hover Effect for Gallery Images */
-        .gallery img:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
+        .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
+            color: #002776;
+        }
+        /* Add styles for grid and list views */
+        .grid .member {
+            display: inline-block;
+            width: calc(33.33% - 10px);
+            margin: 5px;
+        }
+        .list .member {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
         }
     </style>
 </head>
-
 <body>
     <header>
-        <h1>Discover the Chamber Area</h1>
-        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <h1>City Chamber of Commerce of São Paulo City</h1>
+        <nav>
+            <button class="hamburger">&#9776;</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="directory.html">Directory</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <div class="wrapper">
-            <aside>
-                <p>Welcome! Let us know if you have any questions.</p>
-            </aside>
-
-            <section class="gallery">
-                <h2 class="visually-hidden">Image Gallery</h2>
-                <figure>
-                    <picture>
-                        <source srcset="images/image1.webp" type="image/webp">
-                        <source srcset="images/image1.jpg" type="image/jpeg">
-                        <img class="lazy" src="images/placeholder1.webp" data-src="images/image1.jpg" alt="Image 1">
-                    </picture>
-                    <figcaption>Image 1</figcaption>
-                </figure>
-                <figure>
-                    <picture>
-                        <source srcset="chamber/images/image2.webp" type="image/webp">
-                        <source srcset="chamber/images/image2.jpg" type="image/jpeg">
-                        <img class="lazy" src="chamber/images/placeholder2.webp" data-src="chamber/images/image2.jpg" alt="Image 2">
-                    </picture>
-                    <figcaption>Image 2</figcaption>
-                </figure>
-                <figure>
-                    <picture>
-                        <source srcset="chamber/images/image3.webp" type="image/webp">
-                        <source srcset="chamber/images/image3.jpg" type="image/jpeg">
-                        <img class="lazy" src="chamber/images/placeholder3.webp" data-src="chamber/images/image3.jpg" alt="Image 3">
-                    </picture>
-                    <figcaption>Image 3</figcaption>
-                </figure>
-                <figure>
-                    <picture>
-                        <source srcset="chamber/images/image4.webp" type="image/webp">
-                        <source srcset="chamber/images/image4.jpg" type="image/jpeg">
-                        <img class="lazy" src="chamber/images/placeholder4.webp" data-src="chamber/images/image4.jpg" alt="Image 4">
-                    </picture>
-                    <figcaption>Image 4</figcaption>
-                </figure>
-                <figure>
-                    <picture>
-                        <source srcset="chamber/images/image5.webp" type="image/webp">
-                        <source srcset="chamber/images/image5.jpg" type="image/jpeg">
-                        <img class="lazy" src="chamber/images/placeholder5.webp" data-src="chamber/images/image5.jpg" alt="Image 5">
-                    </picture>
-                    <figcaption>Image 5</figcaption>
-                </figure>
-                <figure>
-                    <picture>
-                        <source srcset="chamber/images/image6.webp" type="image/webp">
-                        <source srcset="chamber/images/image6.jpg" type="image/jpeg">
-                        <img class="lazy" src="chamber/images/placeholder6.webp" data-src="chamber/images/image6.jpg" alt="Image 6">
-                    </picture>
-                    <figcaption>Image 6</figcaption>
-                </figure>
-            </section>
-            
+        <div class="menu">
+            <button id="grid">⏹️ Grid</button>
+            <button id="list">📄 List</button>
         </div>
+        <hr>
+        <article id="directory" class="grid">
+            <h2>Member Directory</h2>
+            <!-- Members will be injected here by JavaScript -->
+        </article>
     </main>
-
     <footer>
-        <p>&copy; 2023 Danny Manuel Rausseo Leon. All rights reserved.</p>
+        <p>Contact Information: ✉️rau23003@byui.edu✉️</p>
+        <p>©️Danny Manuel Rausseo Leon, WDD 230</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-
-    <script>
-        // JavaScript code for localStorage and message display
-        const currentDate = Date.now();
-
-        if (localStorage.getItem('lastVisit')) {
-            const lastVisit = new Date(parseInt(localStorage.getItem('lastVisit')));
-            const timeDifference = Math.floor((currentDate - lastVisit) / (1000 * 60 * 60 * 24));
-
-            if (timeDifference === 0) {
-                document.querySelector('aside').innerHTML = "<p>Back so soon! Awesome!</p>";
-            } else {
-                document.querySelector('aside').innerHTML = `<p>You last visited ${timeDifference} ${timeDifference === 1 ? 'day' : 'days'} ago.</p>`;
-            }
-        } else {
-            document.querySelector('aside').innerHTML = "<p>Welcome! Let us know if you have any questions.</p>";
-        }
-
-        localStorage.setItem('lastVisit', currentDate);
-
-        document.addEventListener("DOMContentLoaded", function() {
-            let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove("lazy");
-                            lazyImage.classList.add("lazy-loaded");
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
-
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            } else {
-                let lazyLoad = function() {
-                    let active = false;
-
-                    if (active === false) {
-                        active = true;
-
-                        setTimeout(function() {
-                            lazyImages.forEach(function(lazyImage) {
-                                if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-                                    lazyImage.src = lazyImage.dataset.src;
-                                    lazyImage.classList.remove("lazy");
-                                    lazyImage.classList.add("lazy-loaded");
-
-                                    lazyImages = lazyImages.filter(function(image) {
-                                        return image !== lazyImage;
-                                    });
-
-                                    if (lazyImages.length === 0) {
-                                        document.removeEventListener("scroll", lazyLoad);
-                                        window.removeEventListener("resize", lazyLoad);
-                                        window.removeEventListener("orientationchange", lazyLoad);
-                                    }
-                                }
-                            });
-
-                            active = false;
-                        }, 200);
-                    }
-                };
-
-                document.addEventListener("scroll", lazyLoad);
-                window.addEventListener("resize", lazyLoad);
-                window.addEventListener("orientationchange", lazyLoad);
-            }
-        });
-
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
+    <script src="scripts/main.js"></script>
 </body>
-
 </html>
+
+
 
