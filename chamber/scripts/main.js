@@ -32,21 +32,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Fetch and display members
-    fetch('chamber/data/members.json')
+    fetch('data/members.json')
         .then(response => response.json())
         .then(data => {
             const members = data.members;
             members.forEach(member => {
                 const memberDiv = document.createElement('div');
                 memberDiv.classList.add('member');
-                memberDiv.innerHTML = `
-                    <img src="chamber/images/${member.image}" alt="${member.name}">
+
+                // HTML básico del miembro
+                let memberHTML = `
                     <h3>${member.name}</h3>
                     <p>Address: ${member.address}</p>
                     <p>Phone: ${member.phone}</p>
                     <p>Membership Level: ${member.membership_level}</p>
                     <a href="${member.website}" target="_blank">Visit Website</a>
                 `;
+
+                // Agregar la imagen si existe
+                if (member.image) {
+                    memberHTML = `<img src="chamber/images/${member.image}" alt="${member.name}">` + memberHTML;
+                }
+
+                memberDiv.innerHTML = memberHTML;
                 directory.appendChild(memberDiv);
             });
         })
