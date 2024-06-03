@@ -35,6 +35,17 @@
         .hero h2, .call-to-action h2, .current-events h2, .weather h2, .company-spotlight h2 {
             color: #002776;
         }
+        /* Add styles for grid and list views */
+        .grid .member {
+            display: inline-block;
+            width: calc(33.33% - 10px);
+            margin: 5px;
+        }
+        .list .member {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -44,8 +55,8 @@
             <button class="hamburger">&#9776;</button>
             <ul class="nav-menu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="chamber/discover.html">About Us</a></li>
+                <li><a href="chamber/join.html">Services</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="directory.html">Directory</a></li>
             </ul>
