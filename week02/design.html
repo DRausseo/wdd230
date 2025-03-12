@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
     <title>Design Principles</title>
     <link rel="stylesheet" href="week02/styles/design.css">
-      <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <header>
+        <button type="button" id="menu" title="Toggle navigation menu">☰</button>
+
         <div class="banner">🪲 The Lazy Bug<br>Join us for the ribbon cutting ceremony!<br>Friday at 11:00 AM!</div>
         <h1>Design Principles</h1>
     </header>
+    <nav>
+        <ul class="navigation">
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" title="About Us" class="active">About Us</a></li>
+            <li><a href="#" title="Services">Services</a></li>
+            <li><a href="#" title="Products">Products</a></li>
+            <li><a href="#" title="Contact">Contact Us</a></li>
+        </ul>
+    </nav>
     <main>
         <h2>Heading 2</h2>
         <section>
@@ -38,5 +49,7 @@
     <footer>
         Footer Content
     </footer>
+    <script src="week02/script.js"></script>
+
 </body>
 </html>
