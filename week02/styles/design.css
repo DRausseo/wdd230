@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,50 +6,50 @@
 }
 
 body {
-    font-family: Roboto, helvetica, sans-serif;
+    font-family: Roboto, Helvetica, sans-serif;
     margin: 1rem;
 }
 
-header,
-main,
-footer {
+header, main, footer {
     max-width: 760px;
     margin: 0 auto;
 }
 
-div.banner {
+/* Banner */
+.banner {
     border: 1px solid #bbb;
     padding: 1rem;
     background-color: rgb(230, 243, 254);
     font-weight: 700;
-    word-break: break-word;
     text-align: center;
 }
 
+/* Encabezados */
 h1 {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin: 1rem 0;
 }
 
-/* Responsive Navigation */
-#menu {
+/* Menú Hamburguesa */
+#menu-btn {
     font-size: 1.5rem;
     border: 0;
     background: none;
-    color: #000;
+    cursor: pointer;
     position: absolute;
     top: 1rem;
     right: 1rem;
 }
 
-#menu::before {
+#menu-btn::before {
     content: "☰";
 }
 
-#menu.open::before {
+#menu-btn.open::before {
     content: "❌";
 }
 
+/* Navegación */
 .navigation {
     display: flex;
     flex-direction: column;
@@ -71,16 +72,19 @@ h1 {
     font-weight: 700;
 }
 
-.open a {
+/* Cuando el menú está abierto */
+.navigation.open a {
     display: block;
 }
 
+/* Indicador de página activa */
 .active::before {
     content: "📍";
 }
 
+/* Diseño para pantallas grandes */
 @media (min-width: 37.5em) {
-    #menu {
+    #menu-btn {
         display: none;
     }
 
@@ -94,6 +98,7 @@ h1 {
     }
 }
 
+/* Footer */
 footer {
     margin-top: 1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
