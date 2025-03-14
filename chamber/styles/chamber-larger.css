@@ -1,0 +1,23 @@
+/* Mostrar el menú en pantallas grandes */
+nav ul li {
+    display: inline;
+}
+
+/* Ocultar el botón de hamburguesa en pantallas grandes */
+#menu-toggle {
+    display: none;
+}
+
+/* Layout en grid para una mejor distribución */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Ajustar el tamaño de las tarjetas en pantallas grandes */
+.card {
+    max-width: 400px;
+    margin: auto;
+}
