@@ -75,42 +75,33 @@ nav a:hover {
 
 /* HERO IMAGE */
 .hero-container {
+    width: 600px; /* Igual al h1 */
+    height: 100px; /* Proporción ajustada */
     position: relative;
-    text-align: center;
-    max-width: 800px; /* Ajusta al ancho de las tarjetas */
-    margin: 20px auto; /* Centra el contenedor */
+    margin: 20px auto;
     overflow: hidden;
+    border-radius: 8px;
 }
 
-.hero-container picture {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
+.hero-container picture,
 .hero-container img {
     width: 100%;
-    height: auto;
-    max-height: 400px; /* Ajuste de altura para mantener proporción */
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px; /* Bordes redondeados como las tarjetas */
+    display: block;
 }
 
-/* Ajuste del Overlay */
+/* Overlay para el texto */
 .hero-container .overlay {
     position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    width: auto;
-    max-width: 90%;
     text-align: center;
+    padding: 5px 0;
+    font-size: 1rem; /* Ajustado para evitar cortes */
+    font-weight: bold;
 }
 
 /* MAIN */
@@ -154,16 +145,12 @@ footer p {
 /* MEDIA QUERY PARA PANTALLAS GRANDES */
 @media (min-width: 1024px) {
     .hero-container {
-        max-width: 900px; /* Ajustar al contenido */
-    }
-
-    .hero-container img {
-        max-height: 450px; /* Ajustar proporción */
+        width: 900px; /* Ajustar al contenido */
+        height: 150px;
     }
 
     .hero-container .overlay {
-        font-size: 2rem;
-        bottom: 8%;
+        font-size: 1.2rem;
     }
 }
 
