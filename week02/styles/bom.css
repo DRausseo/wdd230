@@ -39,3 +39,18 @@ button.delete {
     padding: 5px 10px;
     border-radius: 3px;
 }
+button.delete {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+button.delete:hover {
+    background: darkred;
+}
+
