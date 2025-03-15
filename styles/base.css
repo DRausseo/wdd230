@@ -73,6 +73,33 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* HERO IMAGE */
+.hero-container {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.hero-container .overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 /* MAIN */
 main {
     display: grid;
@@ -110,3 +137,4 @@ footer {
 footer p {
     margin: 5px 0;
 }
+
