@@ -1,4 +1,4 @@
-/* RESET BÁSICO */ 
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +13,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-size-adjust: 100%; /* Corrección para el error */
 }
 
 /* HEADER */
@@ -151,7 +152,13 @@ footer p {
 /* MEDIA QUERY PARA PANTALLAS GRANDES */
 @media (min-width: 1024px) {
     .hero-container {
-        max-width: 1200px;
+        max-width: 100%; /* Permite que se expanda al ancho completo */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .hero-container img {
+        width: 100%;
+        height: auto;
     }
 
     .hero-container .overlay {
