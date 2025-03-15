@@ -77,16 +77,26 @@ nav a:hover {
 .hero-container {
     position: relative;
     text-align: center;
-    margin: 20px 0;
+    max-width: 800px; /* Ajusta al ancho de las tarjetas */
+    margin: 20px auto; /* Centra el contenedor */
+    overflow: hidden;
+}
+
+.hero-container picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .hero-container img {
     width: 100%;
     height: auto;
-    display: block;
-    border-radius: 8px;
+    max-height: 400px; /* Ajuste de altura para mantener proporción */
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados como las tarjetas */
 }
 
+/* Ajuste del Overlay */
 .hero-container .overlay {
     position: absolute;
     bottom: 10%;
@@ -96,8 +106,11 @@ nav a:hover {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    width: auto;
+    max-width: 90%;
+    text-align: center;
 }
 
 /* MAIN */
@@ -136,5 +149,21 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+/* MEDIA QUERY PARA PANTALLAS GRANDES */
+@media (min-width: 1024px) {
+    .hero-container {
+        max-width: 900px; /* Ajustar al contenido */
+    }
+
+    .hero-container img {
+        max-height: 450px; /* Ajustar proporción */
+    }
+
+    .hero-container .overlay {
+        font-size: 2rem;
+        bottom: 8%;
+    }
 }
 
