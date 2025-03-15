@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+/* RESET BÁSICO */ 
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
 /* HEADER */
 header {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    flex-direction: column;
     align-items: center;
     background-color: #005f73;
     color: white;
@@ -38,7 +38,7 @@ header img {
 header h1 {
     font-size: 1.8rem;
     font-weight: bold;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
 }
 
 /* NAVEGACIÓN */
@@ -48,7 +48,7 @@ nav {
     border-radius: 8px;
     margin: 10px 0;
     display: flex;
-    flex-direction: column; /* Vertical en móvil */
+    flex-direction: column;
     align-items: center;
 }
 
@@ -77,32 +77,20 @@ nav a:hover {
 }
 
 /* HERO IMAGE */
-@media (min-width: 1024px) {
-    .hero-container {
-        max-width: 1000px; /* Ajustable */
-        height: auto;
-    }
-
-    .hero-container img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 .hero-container {
-    width: 100%; /* Ocupa todo el ancho disponible del contenedor */
-    max-width: 800px; /* No sobrepasa el ancho del contenido */
-    margin: 20px auto; /* Centrado debajo del H1 */
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 20px auto;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
 }
 
-.hero-container picture,
 .hero-container img {
     width: 100%;
-    height: auto; /* Mantiene la proporción */
-    object-fit: cover; /* Evita distorsión */
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
@@ -163,11 +151,12 @@ footer p {
 /* MEDIA QUERY PARA PANTALLAS GRANDES */
 @media (min-width: 1024px) {
     .hero-container {
-        max-width: 900px; /* Ajustar al contenido */
+        max-width: 1200px;
     }
 
     .hero-container .overlay {
         font-size: 1.5rem;
     }
 }
+
 
