@@ -42,6 +42,15 @@
 
     <main>
         <h1>WDD 230: Web Frontend Development</h1>
+         <!-- Hero Image with Overlay -->
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/temple-mobile.webp" media="(max-width: 400px)">
+                <source srcset="images/temple-large.webp" media="(max-width: 960px)">
+                <img src="/images/temple-large.webp" alt="brasilia-brazil-temple" width="960" height="540" loading="lazy">
+            </picture>
+            <div class="overlay">Brasilia Brazil Temple</div>
+        </div>
 
         <section class="card">
             <h2>Learning Activities</h2>
@@ -63,8 +72,15 @@
         <section class="card">
             <h2>Information</h2>
             <p>Weather: [Placeholder]</p>
-            <p>Page visits: [Placeholder]</p>
+            <p>Page visits: <span id="visitCount"></span></p>
         </section>
+        <!-- Google Map Embed -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.90224558946!2d-46.73518108528696!3d-23.63453353730224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce512477a3dfaf%3A0xb5c7298f34a6c4f5!2sVila%20Andrade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005732-020%2C%20Brasil!5e0!3m2!1sen!2sus!4v1710432540387!5m2!1sen!2sus" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
     </main>
 
     <footer>
@@ -74,6 +90,17 @@
 
     <!-- Script externo -->
     <script src="scripts/getDates.js"></script>
+    <script>
+        // Page Visit Counter
+        if (localStorage.getItem("visitCount")) {
+            let count = parseInt(localStorage.getItem("visitCount")) + 1;
+            localStorage.setItem("visitCount", count);
+            document.getElementById("visitCount").textContent = count;
+        } else {
+            localStorage.setItem("visitCount", 1);
+            document.getElementById("visitCount").textContent = 1;
+        }
+    </script>
 
 </body>
 </html>
