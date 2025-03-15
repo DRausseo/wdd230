@@ -18,24 +18,27 @@ body {
 /* HEADER */
 header {
     display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
     align-items: center;
-    justify-content: center;
     background-color: #005f73;
     color: white;
     padding: 20px;
     border-radius: 8px;
+    text-align: center;
+    width: 100%;
 }
 
 header img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-bottom: 10px;
 }
 
-header span {
-    font-size: 1.5rem;
+header h1 {
+    font-size: 1.8rem;
     font-weight: bold;
+    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 /* NAVEGACIÓN */
@@ -75,10 +78,10 @@ nav a:hover {
 
 /* HERO IMAGE */
 .hero-container {
-    width: 600px; /* Igual al h1 */
-    height: 100px; /* Proporción ajustada */
+    width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+    max-width: 800px; /* No sobrepasa el ancho del contenido */
+    margin: 20px auto; /* Centrado debajo del H1 */
     position: relative;
-    margin: 20px auto;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -86,22 +89,25 @@ nav a:hover {
 .hero-container picture,
 .hero-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Evita distorsión */
     display: block;
 }
 
 /* Overlay para el texto */
 .hero-container .overlay {
     position: absolute;
-    width: 100%;
-    bottom: 0;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
-    padding: 5px 0;
-    font-size: 1rem; /* Ajustado para evitar cortes */
+    padding: 8px 12px;
+    font-size: 1.2rem;
     font-weight: bold;
+    border-radius: 5px;
+    width: 90%;
 }
 
 /* MAIN */
@@ -145,12 +151,11 @@ footer p {
 /* MEDIA QUERY PARA PANTALLAS GRANDES */
 @media (min-width: 1024px) {
     .hero-container {
-        width: 900px; /* Ajustar al contenido */
-        height: 150px;
+        max-width: 900px; /* Ajustar al contenido */
     }
 
     .hero-container .overlay {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
