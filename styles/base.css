@@ -77,6 +77,18 @@ nav a:hover {
 }
 
 /* HERO IMAGE */
+@media (min-width: 1024px) {
+    .hero-container {
+        max-width: 1000px; /* Ajustable */
+        height: auto;
+    }
+
+    .hero-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 .hero-container {
     width: 100%; /* Ocupa todo el ancho disponible del contenedor */
     max-width: 800px; /* No sobrepasa el ancho del contenido */
