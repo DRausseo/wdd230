@@ -17,10 +17,14 @@ main {
 img {
     display: block;
     width: 400px;
-    height: 600px;
+    height: auto;
     background: black;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+}
+
+img.lazy-loaded {
+    opacity: 1;
 }
 
 img.lazy-loaded {
