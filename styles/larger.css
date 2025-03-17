@@ -14,22 +14,22 @@
         margin: 0 15px;
     }
 
-    /* MAIN EN GRID - DOS COLUMNAS */
+    /* MAIN EN GRID - UNA SOLA COLUMNA */
     main {
         display: grid;
-        grid-template-columns: 2fr 1fr; /* Learning Activities es más grande */
+        grid-template-columns: 1fr; /* Se mantiene en una sola columna */
         gap: 20px;
     }
 
     .card:first-child {
-        grid-column: span 2; /* Ocupará 2 columnas */
+        grid-column: span 1; /* Ajustado a la nueva estructura */
     }
 }
 
+/* HERO IMAGE */
 .hero-container img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
 }
-
