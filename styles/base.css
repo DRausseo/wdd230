@@ -13,7 +13,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    text-size-adjust: 100%; /* Corrección para el error */
+    text-size-adjust: 100%;
 }
 
 /* HEADER */
@@ -86,6 +86,9 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-container img {
@@ -114,7 +117,7 @@ nav a:hover {
 /* MAIN */
 main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Cambiado a una sola columna */
     gap: 20px;
     padding: 20px;
     max-width: 800px;
@@ -152,8 +155,8 @@ footer p {
 /* MEDIA QUERY PARA PANTALLAS GRANDES */
 @media (min-width: 1024px) {
     .hero-container {
-        max-width: 100%; /* Permite que se expanda al ancho completo */
-        height: auto; /* Ajusta la altura automáticamente */
+        max-width: 100%;
+        height: auto;
     }
 
     .hero-container img {
