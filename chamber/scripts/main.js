@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Función para obtener y mostrar el clima
 function fetchWeather() {
-    const API_KEY = "TU_API_KEY"; // Reemplaza con tu clave de OpenWeather
+    const API_KEY = "b61c56bc4efc70d490f73d0ef70f680e"; // Reemplazar con clave de OpenWeather
     const CITY = "Sao Paulo";
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`;
 
