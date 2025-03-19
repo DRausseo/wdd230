@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Description & Author -->
+    <meta name="description" content="Danny M. Rausseo - WDD 230 - Web Frontend Development course assignment portal. Explore learning activities, weather updates, and more.">
+    <meta name="author" content="Danny M. Rausseo">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Danny M. Rausseo - WDD 230 - Web Frontend Development">
+    <meta property="og:description" content="Explore learning activities, weather updates, and course projects in Danny M. Rausseo's WDD 230 assignment portal.">
+    <meta property="og:image" content="https://drausseo.github.io/wdd230/images/profile.jpg">
+    <meta property="og:url" content="https://drausseo.github.io/wdd230/">
+    <meta property="og:type" content="website">
+
+    <title>Danny M. Rausseo - WDD 230 - Web Frontend Development</title>
+
+     <!-- Normalización primero -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/chamber/styles/chamber-base.css">
+    <link rel="stylesheet" href="/chamber/styles/chamber-larger.css">
+</head>
+<body>
+
+    <header>
+        <img src="images/profile.jpg" alt="Danny M. Rausseo" width="75" height="105">
+        <span>Danny M. Rausseo</span>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/chamber-index.html">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <aside class="sidebar">
+            <section class="demographics">...</section>
+            <section class="events">...</section>
+            <section class="last-visit-message">...</section>
+        </aside>
+        <section class="gallery">
+            <img src="imagen1.jpg" loading="lazy" alt="Descripción">
+            <img src="imagen2.jpg" loading="lazy" alt="Descripción">
+            ...
+        </section>
+    </main>   
+
+    <footer>
+        <p>&copy; <span id="year"></span> Danny M. Rausseo | Country</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- Script externo -->
+    <script src="scripts/getDates.js"></script>
+    <script>
+        // Page Visit Counter
+        if (localStorage.getItem("visitCount")) {
+            let count = parseInt(localStorage.getItem("visitCount")) + 1;
+            localStorage.setItem("visitCount", count);
+            document.getElementById("visitCount").textContent = count;
+        } else {
+            localStorage.setItem("visitCount", 1);
+            document.getElementById("visitCount").textContent = 1;
+        }
+    </script>
+
+</body>
+</html>
