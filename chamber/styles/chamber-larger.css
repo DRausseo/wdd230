@@ -1,24 +1,37 @@
 /* Mostrar el menú en pantallas grandes */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 nav ul li {
     display: inline;
 }
 
 /* Ocultar el botón de hamburguesa en pantallas grandes */
-#menu-toggle {
+#menu-btn {
     display: none;
 }
 
 /* Layout en grid para una mejor distribución */
 main {
     display: grid;
-   @media (max-width: 768px) {
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Aplicar media query correctamente */
+@media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
 }
 
-    gap: 1rem;
-    padding: 2rem;
+@media (min-width: 769px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* Ajustar el tamaño de las tarjetas en pantallas grandes */
