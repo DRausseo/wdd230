@@ -27,14 +27,14 @@
 <body>
 
     <header>
-        <img src="images/profile.jpg" alt="Danny M. Rausseo" width="75" height="105">
-        <span>Danny M. Rausseo</span>
+        <img src="images/profile.jpg" alt="Discover" width="75" height="105">
+        <span>São Paulo Chamber of Commerce</span>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="wdd230/index.html" class="active">Home</a></li>
+            <li><a href="chamber/chamber-index.html">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
             <li><a href="form.html">Form</a></li>
         </ul>
@@ -42,19 +42,32 @@
 
     <main>
         <aside class="sidebar">
-            <section class="demographics">...</section>
-            <section class="events">...</section>
-            <section class="last-visit-message">...</section>
+            <section class="demographics">
+                <h2>Demographics</h2>
+                <p>...</p>
+            </section>
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <p>...</p>
+            </section>
+            <section class="last-visit-message">
+                <h2>Last Visit</h2>
+                <p></p> <!-- Se llenará dinámicamente con JS -->
+            </section>
         </aside>
         <section class="gallery">
+            <h2>Gallery</h2>
             <img src="imagen1.jpg" loading="lazy" alt="Descripción">
             <img src="imagen2.jpg" loading="lazy" alt="Descripción">
-            ...
+            <img src="imagen3.jpg" loading="lazy" alt="Descripción">
+            <img src="imagen4.jpg" loading="lazy" alt="Descripción">
+            <img src="imagen5.jpg" loading="lazy" alt="Descripción">
+            <img src="imagen6.jpg" loading="lazy" alt="Descripción">
         </section>
     </main>   
 
     <footer>
-        <p>&copy; <span id="year"></span> Danny M. Rausseo | WDD230</p>
+        <p>&copy; <span id="year"></span> Danny M. Rausseo | wdd230</p>
         <p id="lastModified"></p>
     </footer>
 
@@ -70,6 +83,26 @@
             localStorage.setItem("visitCount", 1);
             document.getElementById("visitCount").textContent = 1;
         }
+    </script>
+    <script>
+        // Obtener la última visita almacenada
+        const lastVisit = localStorage.getItem("lastVisit");
+        const now = Date.now();
+        let message = "";
+      
+        if (!lastVisit) {
+            message = "Welcome! Let us know if you have any questions.";
+        } else {
+            const daysDifference = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+            message = daysDifference < 1 ? "Back so soon! Awesome!" 
+                     : `You last visited ${daysDifference} day${daysDifference > 1 ? "s" : ""} ago.`;
+        }
+      
+        // Insertar el mensaje en la sidebar
+        document.querySelector(".last-visit-message p").textContent = message;
+      
+        // Guardar la fecha actual en localStorage
+        localStorage.setItem("lastVisit", now);
     </script>
 
 </body>
