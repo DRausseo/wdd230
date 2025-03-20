@@ -1,3 +1,20 @@
+/* General Styles */ 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
 /* Navigation */
 nav {
     background-color: #0a9396;
@@ -5,21 +22,13 @@ nav {
     padding: 0.5rem;
 }
 
-/* Menu List */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
-    display: none; /* Oculto por defecto en móviles */
-}
-
-/* Mostrar menú cuando está abierto */
-#nav-menu.open ul {
-    display: block;
 }
 
 nav ul li {
-    padding: 0.5rem;
+    display: none; /* Se ocultarán en mobile y aparecerán en el diseño grande */
 }
 
 nav ul li a {
@@ -29,15 +38,15 @@ nav ul li a {
     display: block;
 }
 
-/* Hamburger Menu Button */
-#menu-btn {
+/* Hamburger Menu */
+#menu-toggle {
+    display: block;
     background: none;
     border: none;
     font-size: 2rem;
-    color: #000000;
+    color: black;
     cursor: pointer;
     margin: 0 auto;
-    display: block;
 }
 
 /* Cards */
@@ -47,8 +56,6 @@ nav ul li a {
     margin: 1rem;
     border-radius: 8px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
-    text-align: center;
 }
 
 /* Footer */
@@ -60,5 +67,51 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
+}
+
+/* ---- Layout con CSS Grid para discover.html ---- */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #e9ecef;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Galería de imágenes */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Imágenes de la galería con lazy loading */
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Efecto hover en imágenes (solo en pantallas grandes) */
+@media screen and (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 2fr; /* Sidebar más pequeño que la galería */
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 imágenes por fila */
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
