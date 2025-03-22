@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber</title>
+    <meta name="description" content="Join the Chamber of Commerce to grow your business.">
+    <meta name="author" content="Danny  M.  Rausseo">
+    <link rel="stylesheet" href="/chamber/styles/chamber-base.css">
+    <link rel="stylesheet" href="/chamber/styles/chamber-larger.css">
+</head>
+<body>
+    <header>
+        <h1>Join the Chamber</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <form action="thankyou.html" method="get">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" required 
+                       pattern="[A-Za-z\s-]{7,}" 
+                       title="Minimum 7 letters, hyphens, or spaces.">
+
+                <label for="email">Email (@byui.edu only):</label>
+                <input type="email" id="email" name="email" required 
+                       pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" 
+                       placeholder="example@byui.edu">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="business-name">Business Name:</label>
+                <input type="text" id="business-name" name="business-name" required>
+
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership" required>
+                    <option value="np">Non-Profit (Free)</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="silver">Silver</option>
+                    <option value="gold">Gold</option>
+                </select>
+
+                <label for="description">Business Description:</label>
+                <textarea id="description" name="description"></textarea>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <button type="submit">Join Now</button>
+            </form>
+
+            <section class="membership-benefits">
+                <h2>Membership Benefits</h2>
+                <ul>
+                    <li><strong>Non-Profit:</strong> Free listing</li>
+                    <li><strong>Bronze:</strong> Event discounts</li>
+                    <li><strong>Silver:</strong> Training sessions</li>
+                    <li><strong>Gold:</strong> Premium advertising</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Danny M. Rausseo | Chamber of Commerce</p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
