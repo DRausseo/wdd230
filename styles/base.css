@@ -10,36 +10,30 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
-    text-size-adjust: 100%;
 }
 
 /* HEADER */
 header {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background-color: #005f73;
     color: white;
     padding: 20px;
     border-radius: 8px;
-    text-align: center;
-    width: 100%;
 }
 
 header img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin-bottom: 10px;
 }
 
-header h1 {
-    font-size: 1.8rem;
+header span {
+    font-size: 1.5rem;
     font-weight: bold;
-    width: 100%;
 }
 
 /* NAVEGACIÓN */
@@ -49,7 +43,7 @@ nav {
     border-radius: 8px;
     margin: 10px 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Vertical en móvil */
     align-items: center;
 }
 
@@ -69,7 +63,7 @@ nav a {
     font-weight: bold;
     padding: 10px 15px;
     display: block;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 
 nav a:hover {
@@ -79,48 +73,38 @@ nav a:hover {
 
 /* HERO IMAGE */
 .hero-container {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-    margin: 20px auto;
     position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .hero-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
+    border-radius: 8px;
 }
 
-/* Overlay para el texto */
 .hero-container .overlay {
     position: absolute;
-    bottom: 10px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    text-align: center;
-    padding: 8px 12px;
+    padding: 10px 20px;
+    border-radius: 5px;
     font-size: 1.2rem;
     font-weight: bold;
-    border-radius: 5px;
-    width: 90%;
 }
 
 /* MAIN */
 main {
     display: grid;
-    grid-template-columns: 1fr; /* Cambiado a una sola columna */
+    grid-template-columns: 1fr;
     gap: 20px;
     padding: 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -152,21 +136,84 @@ footer p {
     margin: 5px 0;
 }
 
+/* FORMULARIO */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* BOTONES */
+button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0a9396;
+}
+
+/* SECCIÓN DE BENEFICIOS */
+.membership-benefits {
+    background: #f0f0f0;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
 /* MEDIA QUERY PARA PANTALLAS GRANDES */
-@media (min-width: 1024px) {
-    .hero-container {
-        max-width: 100%;
-        height: auto;
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .hero-container img {
-        width: 100%;
-        height: auto;
+    nav ul {
+        display: flex;
+        justify-content: center;
     }
 
-    .hero-container .overlay {
-        font-size: 1.5rem;
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start;
     }
 }
+
 
 
