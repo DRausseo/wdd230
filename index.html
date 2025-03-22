@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Description & Author -->
+
     <meta name="description" content="Danny M. Rausseo - WDD 230 - Web Frontend Development course assignment portal. Explore learning activities, weather updates, and more.">
     <meta name="author" content="Danny M. Rausseo">
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Danny M. Rausseo - WDD 230 - Web Frontend Development">
     <meta property="og:description" content="Explore learning activities, weather updates, and course projects in Danny M. Rausseo's WDD 230 assignment portal.">
     <meta property="og:image" content="https://drausseo.github.io/wdd230/images/profile.jpg">
@@ -17,10 +15,8 @@
 
     <title>Danny M. Rausseo - WDD 230 - Web Frontend Development</title>
 
-     <!-- Normalización primero -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
-    <!-- Estilos CSS -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
 </head>
@@ -42,7 +38,6 @@
 
     <main>
         <h1>WDD 230: Web Frontend Development</h1>
-         <!-- Hero Image with Overlay -->
         <div class="hero-container">
             <picture>
                 <source srcset="https://drausseo.github.io/wdd230/images/temple-mobile.webp" media="(max-width: 400px)">
@@ -54,22 +49,20 @@
 
         <section class="card">
             <h2>Learning Activities</h2>
-            
-                <ul>                
-                    <li><a href="week01/media-query.html">Media Query Example w01</a></li>
-                    <li><a href="week01/holygrail.html">Holy Grail Layout w01</a></li>
-                    <li><a href="week02/design.html">design page w02</a></li>
-                    <li><a href="week02/bom.html">Favorite Book of Mormon Chapters w02</a></li>
-                    <li><a href="week03/images/landscape.webp">Landscape w03</a></li>
-                    <li><a href="week03/lazyload.html">Lazy Loading w03</a></li>
-                    <li><a href="week03/responsive-images.html">Responsive Images w03</a></li>
-                    <li><a href="week03/bom.html">Favorite Book of Mormon Chapters w03</a></li>
-                    <li><a href="https://codepen.io/DRausseo/pen/EaxLBRy">CSS Pseudo-classes CodePen w04</a> </ul>
-                    <li><a href="week04/images/combinadores.webp">Combinators w04</a></li>
-                    <li><a href="week04/tablebuild.html">Tablebuild w04</a></li>
-                    <li><a href="week04/form.html">Form w04</a></li>
-
-                </ul>
+            <ul>
+                <li><a href="week01/media-query.html">Media Query Example w01</a></li>
+                <li><a href="week01/holygrail.html">Holy Grail Layout w01</a></li>
+                <li><a href="week02/design.html">design page w02</a></li>
+                <li><a href="week02/bom.html">Favorite Book of Mormon Chapters w02</a></li>
+                <li><a href="week03/images/landscape.webp">Landscape w03</a></li>
+                <li><a href="week03/lazyload.html">Lazy Loading w03</a></li>
+                <li><a href="week03/responsive-images.html">Responsive Images w03</a></li>
+                <li><a href="week03/bom.html">Favorite Book of Mormon Chapters w03</a></li>
+                <li><a href="https://codepen.io/DRausseo/pen/EaxLBRy">CSS Pseudo-classes CodePen w04</a></li>
+                <li><a href="week04/images/combinadores.webp">Combinators w04</a></li>
+                <li><a href="week04/tablebuild.html">Tablebuild w04</a></li>
+                <li><a href="week04/form.html">Form w04</a></li>
+            </ul>
         </section>
 
         <section class="card">
@@ -77,24 +70,22 @@
             <p>Weather: [Placeholder]</p>
             <p>Page visits: <span id="visitCount"></span></p>
         </section>
-        <!-- Google Map Embed -->
+
         <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.90224558946!2d-46.73518108528696!3d-23.63453353730224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce512477a3dfaf%3A0xb5c7298f34a6c4f5!2sVila%20Andrade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005732-020%2C%20Brasil!5e0!3m2!1sen!2sus!4v1710432540387!5m2!1sen!2sus" 
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14628.90224558946!2d-46.73518108528696!3d-23.63453353730224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce512477a3dfaf%3A0xb5c7298f34a6c4f5!2sVila%20Andrade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005732-020%2C%20Brasil!5e0!3m2!1sen!2sus!4v1710432540387!5m2!1sen!2sus"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
             </iframe>
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Danny M. Rausseo | Country</p>
+        <p>© <span id="year"></span> Danny M. Rausseo | Country</p>
         <p id="lastModified"></p>
     </footer>
 
-    <!-- Script externo -->
     <script src="scripts/getDates.js"></script>
     <script>
-        // Page Visit Counter
         if (localStorage.getItem("visitCount")) {
             let count = parseInt(localStorage.getItem("visitCount")) + 1;
             localStorage.setItem("visitCount", count);
