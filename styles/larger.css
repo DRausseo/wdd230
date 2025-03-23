@@ -25,17 +25,17 @@
         margin: 0 auto;
     }
 
-    /* MAIN EN GRID - DOS COLUMNAS */
+ /* MAIN EN GRID - UNA SOLA COLUMNA */
     main {
         display: grid;
-        grid-template-columns: 2fr 1fr; /* Sección principal más grande */
+        grid-template-columns: 1fr; /* Se mantiene en una sola columna */
         gap: 20px;
         max-width: 1200px;
         margin: auto;
     }
 
     .card:first-child {
-        grid-column: span 2; /* Ocupará ambas columnas */
+        grid-column: span 1; /* Ajustado a la nueva estructura */
     }
 }
 
