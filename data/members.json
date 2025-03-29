@@ -4,7 +4,7 @@
         "address": "2115 S Vista Avenue Boise ID 83705",
         "phone": "(11) 342-9386",
         "website": "https://idahowebsites.com/",
-        "image": "chamber/images/idweb.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/idweb.webp",
         "membership": "Gold"
     },
     {
@@ -12,7 +12,7 @@
         "address": "4072 E Arch Drive Meridian ID 83646",
         "phone": "(11) 631-0640",
         "website": "https://www.surgewebdesign.com/",
-        "image": "chamber/images/surgewebdesign.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/surgewebdesign.webp",
         "membership": "Silver"
     },
     {
@@ -20,7 +20,7 @@
         "address": "1788 E Summerplace Court Meridian ID 83646",
         "phone": "(11) 631-4984",
         "website": "https://graphiczen.com/",
-        "image": "chamber/images/graphiczen.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/graphiczen.webp",
         "membership": "Bronze"
     },
     {
@@ -28,7 +28,7 @@
         "address": "1215 3rd Street Nampa ID 83651",
         "phone": "(11) 461-5070",
         "website": "https://www.peppershock.com/",
-        "image": "chamber/images/peppershock.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/peppershock.webp",
         "membership": "Gold"
     },
     {
@@ -36,7 +36,7 @@
         "address": "500 Technology Drive Boise ID 83709",
         "phone": "(11) 555-1234",
         "website": "https://flashtech.com/",
-        "image": "chamber/images/flashtech.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/flashtech.webp",
         "membership": "Silver"
     },
     {
@@ -44,7 +44,7 @@
         "address": "789 Digital Ave Boise ID 83702",
         "phone": "(11) 555-5678",
         "website": "https://digitaledge.com/",
-        "image": "chamber/images/digitaledge.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/digitaledge.webp",
         "membership": "Bronze"
     },
     {
@@ -52,7 +52,7 @@
         "address": "600 Innovation Road Nampa ID 83686",
         "phone": "(11) 555-8765",
         "website": "https://creativesolutions.com/",
-        "image": "chamber/images/creativesolutions.webp",
+        "image": "https://drausseo.github.io/wdd230/chamber/images/creativesolutions.webp",
         "membership": "Gold"
     }
 ]
