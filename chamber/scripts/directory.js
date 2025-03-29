@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const listViewButton = document.getElementById("listView");
 
     // Cargar datos desde el JSON
-    fetch("data/members.json")
+    fetch("../data/members.json")
         .then(response => response.json())
         .then(data => displayMembers(data));
 
