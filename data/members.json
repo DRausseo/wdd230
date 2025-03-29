@@ -1,0 +1,58 @@
+[
+    {
+        "name": "IDWEB",
+        "address": "2115 S Vista Avenue Boise ID 83705",
+        "phone": "(11) 342-9386",
+        "website": "https://idahowebsites.com/",
+        "image": "idweb.png",
+        "membership": "Gold"
+    },
+    {
+        "name": "Surge Web Design",
+        "address": "4072 E Arch Drive Meridian ID 83646",
+        "phone": "(11) 631-0640",
+        "website": "https://www.surgewebdesign.com/",
+        "image": "surgewebdesign.png",
+        "membership": "Silver"
+    },
+    {
+        "name": "Graphic Zen",
+        "address": "1788 E Summerplace Court Meridian ID 83646",
+        "phone": "(11) 631-4984",
+        "website": "https://graphiczen.com/",
+        "image": "graphiczen.png",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Peppershock Media",
+        "address": "1215 3rd Street Nampa ID 83651",
+        "phone": "(11) 461-5070",
+        "website": "https://www.peppershock.com/",
+        "image": "peppershock.png",
+        "membership": "Gold"
+    },
+    {
+        "name": "Flash Tech Services",
+        "address": "500 Technology Drive Boise ID 83709",
+        "phone": "(11) 555-1234",
+        "website": "https://flashtech.com/",
+        "image": "flashtech.png",
+        "membership": "Silver"
+    },
+    {
+        "name": "Digital Edge Marketing",
+        "address": "789 Digital Ave Boise ID 83702",
+        "phone": "(11) 555-5678",
+        "website": "https://digitaledge.com/",
+        "image": "digitaledge.png",
+        "membership": "Bronze"
+    },
+    {
+        "name": "Creative Solutions",
+        "address": "600 Innovation Road Nampa ID 83686",
+        "phone": "(11) 555-8765",
+        "website": "https://creativesolutions.com/",
+        "image": "creativesolutions.png",
+        "membership": "Gold"
+    }
+]
