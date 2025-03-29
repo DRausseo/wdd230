@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             memberCard.classList.add("member-card");
 
             memberCard.innerHTML = `
-                <img src="images/${member.image}" alt="${member.name} Logo">
+                <img src="${member.image}" alt="${member.name} Logo">
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
                 <p>${member.phone}</p>
