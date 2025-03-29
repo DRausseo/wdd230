@@ -1,26 +1,89 @@
 {
-    "weeks": [
-      {
-        "week": "Week 1",
-        "links": [
-          { "url": "week01/holygrail.html", "title": "HG Layout" },
-          { "url": "week01/media-query.html", "title": "Media Queries" }
-        ]
-      },
-      {
-        "week": "Week 2",
-        "links": [
-          { "url": "week02/design.html", "title": "Design Principles" },
-          { "url": "week02/bom.html", "title": "Book of Mormon Chapters" }
-        ]
-      },
-      {
-        "week": "Week 3",
-        "links": [
-          { "url": "week03/lazyload.html", "title": "Lazy Loading" },
-          { "url": "week03/responsive-images.html", "title": "Responsive Images" }
-        ]
-      }
-    ]
-  }
-  
+  "weeks": [
+    {
+      "week": "Week 1",
+      "links": [
+        {
+          "url": "week01/holygrail.html",
+          "title": "HG Layout"
+        },
+        {
+          "url": "week01/media-query.html",
+          "title": "mQueries"
+        }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "links": [
+        {
+          "url": "week02/design.html",
+          "title": "Design Page"
+        },
+        {
+          "url": "week02/bom.html",
+          "title": "Favorite BOM Chapters"
+        }
+      ]
+    },
+    {
+      "week": "Week 3",
+      "links": [
+        {
+          "url": "week03/images/landscape.webp",
+          "title": "Landscape"
+        },
+        {
+          "url": "week03/lazyload.html",
+          "title": "Lazy Loading"
+        },
+        {
+          "url": "week03/responsive-images.html",
+          "title": "Responsive Images"
+        },
+        {
+          "url": "week03/bom.html",
+          "title": "Favorite BOM Chapters"
+        }
+      ]
+    },
+    {
+      "week": "Week 4",
+      "links": [
+        {
+          "url": "https://codepen.io/DRausseo/pen/EaxLBRy",
+          "title": "CSS Pseudo-classes"
+        },
+        {
+          "url": "week04/images/combinadores.webp",
+          "title": "Combinators"
+        },
+        {
+          "url": "week04/tablebuild.html",
+          "title": "Table Build"
+        },
+        {
+          "url": "week04/form.html",
+          "title": "Form"
+        }
+      ]
+    },
+    {
+      "week": "Week 5",
+      "links": [
+        {
+          "url": "week05/new-ward-members.json",
+          "title": "JSON Data"
+        },
+        {
+          "url": "week05/prophets.html",
+          "title": "Latter-day Prophets"
+        },
+        {
+          "url": "week05/weather.html",
+          "title": "Weather API"
+        }
+      ]
+    }
+  ]
+}
