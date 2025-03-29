@@ -214,6 +214,61 @@ button:hover {
         align-items: start;
     }
 }
+/* TARJETA DEL CLIMA */
+.weather-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0a9396;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.weather-card img {
+    width: 60px;
+    height: 60px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.weather-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.weather-info p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* LISTA DE ENLACES DINÁMICOS */
+.links-list {
+    list-style: none;
+    padding: 0;
+}
+
+.links-list li {
+    margin: 10px 0;
+}
+
+.links-list a {
+    text-decoration: none;
+    color: #005f73;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.links-list a:hover {
+    color: #ee9b00;
+}
+
 
 
 
