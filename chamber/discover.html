@@ -4,28 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Meta Description & Author -->
-    <meta name="description" content="Danny M. Rausseo - WDD 230 - Web Frontend Development course assignment portal. Explore learning activities, weather updates, and more.">
+    <meta name="description" content="Danny M. Rausseo - WDD 230 - Web Frontend Development course assignment portal.">
     <meta name="author" content="Danny M. Rausseo">
-
-    <!-- Open Graph Meta Tags -->
+    
     <meta property="og:title" content="Danny M. Rausseo - WDD 230 - Web Frontend Development">
-    <meta property="og:description" content="Explore learning activities, weather updates, and course projects in Danny M. Rausseo's WDD 230 assignment portal.">
+    <meta property="og:description" content="Explore learning activities and projects.">
     <meta property="og:image" content="https://drausseo.github.io/wdd230/images/profile.jpg">
     <meta property="og:url" content="https://drausseo.github.io/wdd230/">
     <meta property="og:type" content="website">
 
     <title>Danny M. Rausseo - WDD 230 - Web Frontend Development</title>
-
-     <!-- Normalización primero -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-
-    <!-- Estilos CSS -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="styles/chamber-base.css">
     <link rel="stylesheet" href="styles/chamber-larger.css">
 </head>
 <body>
-
     <header>
         <img src="images/logo.png" alt="Discover" width="75" height="105">
         <span>São Paulo Chamber of Commerce</span>
@@ -52,16 +46,16 @@
             </section>
             <section class="last-visit-message">
                 <h2>Last Visit</h2>
-                <p></p> <!-- Se llenará dinámicamente con JS -->
+                <p></p>
             </section>
         </aside>
         <section class="gallery">
             <h2>Gallery</h2>
-            <img src="images/imagen1.webp" loading="lazy" alt="Octavio Frias de Oliveira suspension bridge">
-            <img src="images/imagen2.webp" loading="lazy" alt="Octavio Frias de Oliveira suspension bridge another view">
-            <img src="images/imagen3.webp" loading="lazy" alt="São paulo Downtown">
+            <img src="images/imagen1.webp" loading="lazy" alt="Bridge">
+            <img src="images/imagen2.webp" loading="lazy" alt="Bridge another view">
+            <img src="images/imagen3.webp" loading="lazy" alt="São Paulo Downtown">
             <img src="images/imagen4.webp" loading="lazy" alt="Museum Ipiranga">
-            <img src="images/imagen5.webp" loading="lazy" alt="São Paulo Downtown another view">
+            <img src="images/imagen5.webp" loading="lazy" alt="Downtown view">
             <img src="images/imagen6.webp" loading="lazy" alt="Paulista Avenue">
         </section>
     </main>   
@@ -69,41 +63,43 @@
     <footer>
         <p>&copy; <span id="year"></span> Danny M. Rausseo | wdd230</p>
         <p id="lastModified"></p>
+        <p>Visit Count: <span id="visitCount"></span></p>
     </footer>
 
-    <!-- Script externo -->
     <script src="/wdd230/scripts/getDates.js"></script>
     <script>
-        // Page Visit Counter
-        if (localStorage.getItem("visitCount")) {
-            let count = parseInt(localStorage.getItem("visitCount")) + 1;
-            localStorage.setItem("visitCount", count);
-            document.getElementById("visitCount").textContent = count;
-        } else {
-            localStorage.setItem("visitCount", 1);
-            document.getElementById("visitCount").textContent = 1;
-        }
-    </script>
-    <script>
-        // Obtener la última visita almacenada
-        const lastVisit = localStorage.getItem("lastVisit");
-        const now = Date.now();
-        let message = "";
-      
-        if (!lastVisit) {
-            message = "Welcome! Let us know if you have any questions.";
-        } else {
-            const daysDifference = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
-            message = daysDifference < 1 ? "Back so soon! Awesome!" 
-                     : `You last visited ${daysDifference} day${daysDifference > 1 ? "s" : ""} ago.`;
-        }
-      
-        // Insertar el mensaje en la sidebar
-        document.querySelector(".last-visit-message p").textContent = message;
-      
-        // Guardar la fecha actual en localStorage
-        localStorage.setItem("lastVisit", now);
-    </script>
+        window.onload = function() {
+            // Page Visit Counter
+            let visitCount = document.getElementById("visitCount");
+            if (visitCount) {
+                let count = localStorage.getItem("visitCount") ? parseInt(localStorage.getItem("visitCount")) + 1 : 1;
+                localStorage.setItem("visitCount", count);
+                visitCount.textContent = count;
+            }
 
+            // Obtener la última visita almacenada
+            const lastVisit = localStorage.getItem("lastVisit");
+            const now = Date.now();
+            let message = "";
+          
+            if (!lastVisit) {
+                message = "Welcome! Let us know if you have any questions.";
+            } else {
+                const daysDifference = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+                message = daysDifference < 1 ? "Back so soon! Awesome!" 
+                         : `You last visited ${daysDifference} day${daysDifference > 1 ? "s" : ""} ago.`;
+            }
+          
+            // Verificar si el elemento existe antes de modificarlo
+            const visitMessage = document.querySelector(".last-visit-message p");
+            if (visitMessage) {
+                visitMessage.textContent = message;
+            }
+
+            // Guardar la fecha actual en localStorage
+            localStorage.setItem("lastVisit", now);
+        };
+    </script>
 </body>
 </html>
+
